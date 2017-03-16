@@ -250,6 +250,7 @@ export interface LoaderOptions {
     transpileOnly: boolean;
     ignoreDiagnostics: number[];
     visualStudioErrorFormat: boolean;
+    webStormErrorFormat: boolean;
     compilerOptions: typescript.CompilerOptions;
     appendTsSuffixTo: RegExp[];
     entryFileIsJs: boolean;

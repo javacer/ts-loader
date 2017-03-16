@@ -82,6 +82,7 @@ function getLoaderOptions(loader: interfaces.Webpack) {
         compilerOptions: {},
         appendTsSuffixTo: [],
         entryFileIsJs: false,
+        webStormErrorFormat: false,
     }, configFileOptions, queryOptions);
 
     options.ignoreDiagnostics = utils.arrify(options.ignoreDiagnostics).map(Number);

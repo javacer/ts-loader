@@ -38,6 +38,9 @@ export function formatErrors(
                 if (loaderOptions.visualStudioErrorFormat) {
                     errorMessage = path.normalize(diagnostic.file.fileName).red + errorMessage;
                 }
+                if (loaderOptions.webStormErrorFormat) {
+                    errorMessage = `${messageText.red}\nat ${path.normalize(diagnostic.file.fileName)}:${(lineChar.line + 1).toString()}:${(lineChar.character + 1).toString()}`
+                }
                 error = makeError({
                     message: errorMessage,
                     rawMessage: messageText,
